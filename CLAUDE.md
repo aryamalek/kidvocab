@@ -72,9 +72,15 @@ they ask and update the file to match, rather than defending the old decision.
 ## Current design decisions (changeable at either parent's request)
 
 - Pictogram art, no emoji as card art (fallback only), no flags.
-- All four word rows equal size; transliteration slightly muted.
-- Each word row is a framed, equally wide button (rounded frame, solid bottom
-  edge) that sinks in and lights up while it speaks — a toddler has to see that
-  the words are things you press. The whole frame is tappable; swiping across a
-  frame still flips the card.
+- Three word buttons, not four: English, German, and one button holding both
+  Persian lines (script above, transliteration under it, slightly muted).
+- Each is a framed, equally wide button (rounded frame, solid bottom edge) sized
+  for a toddler thumb — it sinks in and lights up while it speaks, so he sees
+  that the words are things you press. The whole frame is tappable; swiping
+  across a frame still flips the card.
+- Tapping the same button again and again is normal play: every press restarts
+  the clip (voices still alternate) instead of stacking voices on top of
+  each other.
+- Card changes follow the finger: the card drags with the swipe, a small flick
+  is enough to flip it, and quick repeated swipes each land.
 - No menus, settings screens, or accounts — instant and toddler-proof.
