@@ -30,8 +30,8 @@ VOICES = {
 }
 RATE = "-20%"  # slower, for a toddler
 
-ENTRY_RE = re.compile(
-    r'\{\s*emoji:.*?en:\s*"([^"]+)".*?de:\s*"([^"]+)".*?fa:\s*"([^"]+)"', re.S)
+ENTRY_RE = re.compile(r'\{[^\n]*?en:\s*"[^"]+"[^\n]*\},')
+FIELD = lambda name, entry: (m.group(1) if (m := re.search(rf'{name}:\s*"([^"]+)"', entry)) else None)
 
 
 async def fetch(text, voice, path):
@@ -43,7 +43,13 @@ def main():
     AUDIO_DIR.mkdir(exist_ok=True)
 
     vocab_block = html[html.index("const VOCAB"):html.index("];", html.index("const VOCAB"))]
-    entries = ENTRY_RE.findall(vocab_block)
+    entries = []
+    for m in ENTRY_RE.finditer(vocab_block):
+        e = m.group(0)
+        # faSay: optional fully-vowelized Farsi fed to the voice instead of the
+        # display spelling, for words the TTS mispronounces
+        entries.append((FIELD("en", e), FIELD("de", e),
+                        FIELD("faSay", e) or FIELD("fa", e)))
     if not entries:
         sys.exit("No VOCAB entries found in index.html")
 
