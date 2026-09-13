@@ -8,7 +8,10 @@ Maria (the child's mother, German speaker) is a primary user of this repo.
 ## Adding or changing words — the full workflow
 
 1. Edit the `VOCAB` list at the top of `index.html`. One line per word:
-   `{ emoji: "🐸", en: "frog", de: "der Frosch", fa: "قورباغه", faLatin: "ghurbāgheh" },`
+   `{ emoji: "🐸", en: "frog", de: "der Frosch", fa: "قورباغه", faLatin: "ghurbāgheh", cat: "animals" },`
+   - `cat` is required — it's the deck the card belongs to (animals, food, body,
+     vehicles, home, nature, shapes; add a new deck by also adding it to the
+     DECKS list in the app script).
    - German always includes the article (der/die/das) — gender matters for learning.
    - `faLatin` is a simple readable transliteration (ā for long a, kh/gh/sh digraphs,
      -eh endings: gorbeh, setāreh). Match the existing entries' style.

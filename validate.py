@@ -45,6 +45,13 @@ for emoji, en, de, fa, fa_latin in vocab:
     if not re.match(r"(der|die|das)\s", de):
         warnings.append(f'{en}: de "{de}" has no article (der/die/das)')
 
+KNOWN_CATS = {"animals", "food", "body", "vehicles", "home", "nature", "shapes"}
+cats = re.findall(r'cat: "([^"]+)"', block("VOCAB"))
+if len(cats) != len(vocab):
+    errors.append(f"{len(vocab) - len(cats)} VOCAB entries missing a cat field")
+for c in set(cats) - KNOWN_CATS:
+    errors.append(f'unknown cat "{c}" (add it to KNOWN_CATS here and DECKS in the app)')
+
 images = set(re.findall(r'"([^"]+)": "data:image/png', block("IMAGES")))
 for en in words:
     if en not in images:
