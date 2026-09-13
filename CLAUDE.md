@@ -15,11 +15,27 @@ Maria (the child's mother, German speaker) is a primary user of this repo.
    - The emoji is only a fallback shown until an image is fetched.
 2. Run `python3 fetch_images.py` — finds an ARASAAC pictogram per new word,
    caches it in `images/`, embeds it into `index.html` as a data URI.
-3. Run `python3 fetch_audio.py` (needs `pip install edge-tts`) — generates spoken
+3. **Look at every newly fetched `images/<word>.png`** (read the image file) and
+   confirm it clearly depicts the word for a 2-year-old. Keyword search picks
+   wrong concepts regularly — if it's off, pick a better pictogram (see below).
+4. Run `python3 fetch_audio.py` (needs `pip install edge-tts`) — generates spoken
    clips for all three languages, two voices each (taps alternate voices; the first
    voice matches the parent who speaks that language: Farsi male, German female).
-4. Commit everything (including `images/`, `audio/`, and the regenerated
-   `index.html`) and push to `main`.
+5. Run `python3 validate.py` — must print `ok` before you push. The same check
+   runs as a GitHub Action on every push.
+6. Commit everything (including `images/`, `audio/`, and the regenerated
+   `index.html`) and push **directly to `main`** — do not open a PR unless the
+   change is risky. Pages redeploys in ~1 min and the app on each device
+   refreshes itself next time it's opened.
+
+## Talking to the family
+
+Requests often come from a parent on a phone, mid-life, possibly in German —
+answer in the language you were addressed in. Narrate what you're doing in
+plain, non-technical language as you go (finding pictures, checking them,
+recording the voices, publishing), not in git/CI vocabulary. When you finish,
+say clearly: the words are live at https://aryamalek.github.io/kidvocab/ —
+close and reopen the app and they'll be there.
 
 Both scripts are idempotent: they skip words that already have cached files, so
 re-running is always safe.

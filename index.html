@@ -520,6 +520,22 @@ const IMAGES = {
   });
 
   render();
+
+  // reload when a new version has been deployed (checked at launch/foreground;
+  // position is restored from localStorage so the reload is invisible)
+  let deployTag = null;
+  async function checkUpdate() {
+    try {
+      const r = await fetch(location.href, { method: "HEAD", cache: "no-store" });
+      const tag = r.headers.get("etag") || r.headers.get("last-modified");
+      if (deployTag && tag && tag !== deployTag) location.reload();
+      else if (tag) deployTag = tag;
+    } catch {}
+  }
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) checkUpdate();
+  });
+  checkUpdate();
 })();
 </script>
 </body>
