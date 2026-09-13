@@ -35,6 +35,8 @@ words = [en for _, en, _, _, _ in vocab]
 for w in sorted({w for w in words if words.count(w) > 1}):
     errors.append(f'duplicate word "{w}" in VOCAB')
 
+cats_by_word = dict(re.findall(r'en:\s*"([^"]+)".*?cat:\s*"([^"]+)"', block("VOCAB")))
+
 for emoji, en, de, fa, fa_latin in vocab:
     if not emoji:
         warnings.append(f"{en}: empty emoji fallback")
@@ -42,10 +44,12 @@ for emoji, en, de, fa, fa_latin in vocab:
         errors.append(f"{en}: fa \"{fa}\" is not in Persian script")
     if re.search(r"[؀-ۿ]", fa_latin):
         errors.append(f"{en}: faLatin \"{fa_latin}\" contains Persian script")
-    if not re.match(r"(der|die|das)\s", de):
+    # emotion words are adjectives (traurig, müde) — no article to carry
+    if cats_by_word.get(en) != "emotions" and not re.match(r"(der|die|das)\s", de):
         warnings.append(f'{en}: de "{de}" has no article (der/die/das)')
 
-KNOWN_CATS = {"animals", "food", "body", "vehicles", "home", "nature", "shapes"}
+KNOWN_CATS = {"animals", "food", "body", "vehicles", "home", "nature", "shapes",
+              "emotions"}
 cats = re.findall(r'cat: "([^"]+)"', block("VOCAB"))
 if len(cats) != len(vocab):
     errors.append(f"{len(vocab) - len(cats)} VOCAB entries missing a cat field")

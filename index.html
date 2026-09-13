@@ -93,6 +93,23 @@ const VOCAB = [
   { emoji: "🍦", en: "cone", arasaac: 9112,      de: "der Kegel",     fa: "مَخْروط",    faLatin: "makhrut", cat: "shapes" },
   { emoji: "🥫", en: "cylinder",  de: "der Zylinder",  fa: "اُسْتُوانِه",  faLatin: "ostovāneh", cat: "shapes" },
   { emoji: "🔺", en: "pyramid", arasaac: 9110,   de: "die Pyramide",  fa: "هِرَم",      faLatin: "heram", cat: "shapes" },
+  // Emotions
+  { emoji: "😀", en: "happy",     de: "glücklich",     fa: "خوشْحال",     faLatin: "khoshhāl", cat: "emotions" },
+  { emoji: "😢", en: "sad",       de: "traurig",       fa: "ناراحَت",     faLatin: "nārāhat", cat: "emotions" },
+  { emoji: "😠", en: "angry",     de: "wütend",        fa: "عَصَبانی",     faLatin: "asabāni", cat: "emotions" },
+  { emoji: "😴", en: "tired",     de: "müde",          fa: "خَسْته",       faLatin: "khasteh", cat: "emotions" },
+  { emoji: "😨", en: "scared",    de: "ängstlich",     fa: "تَرْسیده",     faLatin: "tarsideh", cat: "emotions" },
+  { emoji: "😭", en: "cry",       de: "weinen",        fa: "گِرْیه",       faLatin: "geryeh", cat: "emotions" },
+  { emoji: "😄", en: "laugh",     de: "lachen",        fa: "خَنْده",       faLatin: "khandeh", cat: "emotions" },
+  { emoji: "🥰", en: "love",      de: "die Liebe",     fa: "عِشْق",        faLatin: "eshgh", cat: "emotions" },
+  { emoji: "😲", en: "surprised", de: "überrascht",    fa: "مُتِعَجِّب",     faLatin: "mota'ajjeb", cat: "emotions" },
+  { emoji: "🙈", en: "shy",       de: "schüchtern",    fa: "خِجالَتی",     faLatin: "khejālati", cat: "emotions" },
+  { emoji: "🤩", en: "excited",   de: "aufgeregt",     fa: "هَیَجان‌زَده",   faLatin: "hayajānzadeh", cat: "emotions" },
+  { emoji: "🏅", en: "proud",     de: "stolz",         fa: "سَرْبُلَنْد",     faLatin: "sarboland", cat: "emotions" },
+  { emoji: "😌", en: "calm",      de: "ruhig",         fa: "آرام",       faLatin: "ārām", cat: "emotions" },
+  { emoji: "😒", en: "jealous",   de: "eifersüchtig",  fa: "حَسود",       faLatin: "hasud", cat: "emotions" },
+  { emoji: "😔", en: "lonely",    de: "einsam",        fa: "تَنْها",       faLatin: "tanhā", cat: "emotions" },
+  { emoji: "💪", en: "brave",     de: "mutig",         fa: "شُجاع",       faLatin: "shojā", cat: "emotions" },
 ];
 </script>
 
@@ -268,6 +285,7 @@ const VOCAB = [
     object-fit: contain;
     display: block;
   }
+  .plate img[hidden] { display: none; }   /* words still falling back to the emoji */
   .plate .emoji {
     font-size: clamp(4.5rem, min(34vw, 20vh), 11rem);
     line-height: 1.15;
@@ -537,6 +555,7 @@ const IMAGES = {
   const KEY = "littlewords-v2";
   const TINTS = 5;
   const DECKS = [
+    ["emotions", "😊 Emotions"],
     ["shapes", "🔷 Shapes"],
     ["all", "🧸 All words"],
     ["animals", "🐾 Animals"],

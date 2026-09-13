@@ -23,6 +23,10 @@ that happens, update this file to the new thinking.
   (initial set, 2026-09-13).
 - Shapes — 22 words: the full 2D set (incl. crescent, cross, arrow, star) plus
   3D solids (sphere, cube, cone, cylinder, pyramid) (2026-09-13, Arya's request).
+- Emotions — 16 words, aimed at 2–6 (2026-09-13, Maria's request): the six he
+  can use now (happy, sad, angry, tired, scared, cry), then laugh, love,
+  surprised, shy, excited, and the older ones — proud, calm, jealous, lonely,
+  brave. Words only so far: pictures and recorded voices still to come.
 
 ## Backlog — next themes to consider
 
@@ -42,6 +46,15 @@ that happens, update this file to the new thinking.
   delete those files, fetch_images.py can't re-create them.
 - 2026-09-13: cards grouped into decks (cat field + header chip); star moved
   from nature to shapes. Default deck set to Shapes while that's the focus.
+- 2026-09-13: emotions added as the next theme at Maria's request; Emotions is
+  now the first deck, so it's what the app opens with. Emotion words are
+  adjectives — no German article, unlike every other deck.
+  Still open: that session could not reach ARASAAC or the voice service
+  (blocked by its network policy), so the 16 emotion cards have no pictogram
+  and no recorded voices yet. Next session with reach: run fetch_images.py,
+  look at each new images/<word>.png (emotion faces are easy to get wrong —
+  "cry" and "sad" often come back as the same picture), then fetch_audio.py,
+  then validate.py. Arya: please check the Persian vowelization on those 16.
 
 - 2026-09-13: start with 45-word core set; images = ARASAAC, audio = two
   alternating voices per language, first voice matches the parent.

@@ -10,8 +10,12 @@ Maria (the child's mother, German speaker) is a primary user of this repo.
 1. Edit the `VOCAB` list at the top of `index.html`. One line per word:
    `{ emoji: "🐸", en: "frog", de: "der Frosch", fa: "قورْباغِه", faLatin: "ghurbāgheh", cat: "animals" },`
    - `cat` is required — it's the deck the card belongs to (animals, food, body,
-     vehicles, home, nature, shapes; add a new deck by also adding it to the
-     DECKS list in the app script).
+     vehicles, home, nature, shapes, emotions; add a new deck by also adding it
+     to the DECKS list in the app script and KNOWN_CATS in validate.py). The
+     first deck in DECKS is what the app opens with — keep the current focus
+     theme there.
+   - Emotion words are adjectives (traurig, müde), so they carry no article;
+     validate.py skips the article check for that deck.
    - German always includes the article (der/die/das) — gender matters for learning.
    - `fa` is written FULLY VOWELIZED (children's-book style: zabar/zir/piš,
      tashdid, sukun on clusters — e.g. مُثَلَّث, سَگ, دَسْت). This is both the card
