@@ -73,4 +73,8 @@ they ask and update the file to match, rather than defending the old decision.
 
 - Pictogram art, no emoji as card art (fallback only), no flags.
 - All four word rows equal size; transliteration slightly muted.
+- Each word row is a framed, equally wide button (rounded frame, solid bottom
+  edge) that sinks in and lights up while it speaks — a toddler has to see that
+  the words are things you press. The whole frame is tappable; swiping across a
+  frame still flips the card.
 - No menus, settings screens, or accounts — instant and toddler-proof.
