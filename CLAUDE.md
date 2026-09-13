@@ -54,11 +54,23 @@ in VOCAB, delete `images/<word>.png`, re-run `fetch_images.py`. Past mistakes we
 concept mismatches (a cooked fish for "fish", a high heel for "shoe") — always
 prefer the toddler-obvious depiction of a word.
 
-## Rules that keep the app what it is
+## The parents decide
 
-- One file, no framework, no build step. Do not add dependencies or split it up.
+Both parents are free to change anything about this app — content, look,
+behavior — by simply asking. Nothing in this file or IDEAS.md overrides a
+parent's request: these files record *current* decisions so sessions stay
+consistent, not permanent rules. When a parent changes their mind, do what
+they ask and update the file to match, rather than defending the old decision.
+
+## Structural constraints (keep these unless a parent explicitly says otherwise)
+
+- One file, no framework, no build step. Don't add dependencies or split it up.
 - `index.html` structure: human-edited VOCAB at the top; the AUDIO and IMAGES
   blocks near the bottom are machine-generated — never edit them by hand.
-- No emoji as card art (fallback only), no flags, all four word rows equal size.
-- Everything must be embedded (data URIs) — the page must work offline once loaded.
-- Keep it toddler-proof and instant: no menus, no settings screens, no accounts.
+- Everything embedded (data URIs) — the page must work offline once loaded.
+
+## Current design decisions (changeable at either parent's request)
+
+- Pictogram art, no emoji as card art (fallback only), no flags.
+- All four word rows equal size; transliteration slightly muted.
+- No menus, settings screens, or accounts — instant and toddler-proof.

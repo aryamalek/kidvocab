@@ -4,6 +4,10 @@ Shared planning memory for Little Words. Any session (either parent, any device)
 that discusses what to teach next should read this first and record decisions
 here — otherwise plans made in one chat are invisible to the next.
 
+These are working notes, not rules — either parent can override, reorder, or
+rewrite any of it at any time. Changing your mind is part of the process; when
+that happens, update this file to the new thinking.
+
 ## Principles for picking words (he's 2.5)
 
 - Concrete things he can see, touch, or point at — nouns first.
