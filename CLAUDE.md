@@ -55,6 +55,15 @@ close and reopen the app and they'll be there.
 Both scripts are idempotent: they skip words that already have cached files, so
 re-running is always safe.
 
+## Tell the parent what the other one changed
+
+Both parents work on this app from their own phones, so either can open it and
+find something they never asked for. At the start of a session, look at what has
+landed since that parent's own last change (`git log`, and IDEAS.md's decisions
+log) and say it in a few plain sentences before getting into the new request:
+new words, anything that looks or behaves differently, anything already live.
+Maria asked for this on 2026-09-13 — don't wait to be asked.
+
 ## If an auto-picked image is wrong
 
 Search https://arasaac.org for the word, add `arasaac: <id>,` to that word's line
