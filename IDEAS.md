@@ -21,6 +21,8 @@ that happens, update this file to the new thinking.
 
 - Animals, food & drink, body, vehicles, home & play, nature — 45 words
   (initial set, 2026-09-13).
+- Shapes — 13 words from circle through parallelogram/trapezoid/octagon
+  (2026-09-13, Arya's request; deliberately goes beyond the usual toddler set).
 
 ## Backlog — next themes to consider
 
@@ -32,6 +34,12 @@ that happens, update this file to the new thinking.
 - First adjectives when ready: big/small, hot/cold, colors
 
 ## Decisions log
+
+- 2026-09-13: shapes theme added at Arya's request, including advanced shapes
+  (parallelogram, rhombus, trapezoid…) — going past age-typical vocabulary on
+  purpose. Three shapes ARASAAC lacks (trapezoid, octagon, semicircle) are
+  hand-drawn in images/ in the same outline style; don't delete those files,
+  fetch_images.py can't re-create them.
 
 - 2026-09-13: start with 45-word core set; images = ARASAAC, audio = two
   alternating voices per language, first voice matches the parent.
