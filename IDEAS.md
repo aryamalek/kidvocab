@@ -1,0 +1,33 @@
+# Vocabulary plan
+
+Shared planning memory for Little Words. Any session (either parent, any device)
+that discusses what to teach next should read this first and record decisions
+here — otherwise plans made in one chat are invisible to the next.
+
+## Principles for picking words (he's 2.5)
+
+- Concrete things he can see, touch, or point at — nouns first.
+- His actual daily world beats "classic flashcard" words: his food, his toys,
+  his routines.
+- High-frequency across all three households' languages; skip words the
+  parents rarely say.
+- Batch by theme (5–8 words) — themes make good demo/play sessions.
+
+## Covered so far
+
+- Animals, food & drink, body, vehicles, home & play, nature — 45 words
+  (initial set, 2026-09-13).
+
+## Backlog — next themes to consider
+
+- Playground (Rutsche, Schaukel, Sandkasten…) — queued as Maria's first demo
+- Clothes (jacket, hat, socks…)
+- Bath time (bathtub, soap, towel…)
+- Weather beyond rain/sun (snow, wind, cloud)
+- Family words (Mama, Papa, grandma/grandpa in all three languages)
+- First adjectives when ready: big/small, hot/cold, colors
+
+## Decisions log
+
+- 2026-09-13: start with 45-word core set; images = ARASAAC, audio = two
+  alternating voices per language, first voice matches the parent.

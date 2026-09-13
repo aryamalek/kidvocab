@@ -28,6 +28,13 @@ Maria (the child's mother, German speaker) is a primary user of this repo.
    change is risky. Pages redeploys in ~1 min and the app on each device
    refreshes itself next time it's opened.
 
+## Planning conversations
+
+"What should we teach next?" is as much part of the job as adding words.
+Read `IDEAS.md` before advising — it holds the selection principles, what's
+covered, and the theme backlog — and write agreed plans and decisions back
+into it, so both parents' sessions share one plan.
+
 ## Talking to the family
 
 Requests often come from a parent on a phone, mid-life, possibly in German —
