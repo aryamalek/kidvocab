@@ -10,8 +10,12 @@ Maria (the child's mother, German speaker) is a primary user of this repo.
 1. Edit the `VOCAB` list at the top of `index.html`. One line per word:
    `{ emoji: "🐸", en: "frog", de: "der Frosch", fa: "قورْباغِه", faLatin: "ghurbāgheh", cat: "animals" },`
    - `cat` is required — it's the deck the card belongs to (animals, food, body,
-     vehicles, home, nature, shapes; add a new deck by also adding it to the
-     DECKS list in the app script).
+     vehicles, home, nature, shapes, emotions; add a new deck by also adding it
+     to the DECKS list in the app script and KNOWN_CATS in validate.py). The
+     first deck in DECKS is what the app opens with — keep the current focus
+     theme there.
+   - Emotion words are adjectives (traurig, müde), so they carry no article;
+     validate.py skips the article check for that deck.
    - German always includes the article (der/die/das) — gender matters for learning.
    - `fa` is written FULLY VOWELIZED (children's-book style: zabar/zir/piš,
      tashdid, sukun on clusters — e.g. مُثَلَّث, سَگ, دَسْت). This is both the card
@@ -54,6 +58,15 @@ close and reopen the app and they'll be there.
 
 Both scripts are idempotent: they skip words that already have cached files, so
 re-running is always safe.
+
+## Tell the parent what the other one changed
+
+Both parents work on this app from their own phones, so either can open it and
+find something they never asked for. At the start of a session, look at what has
+landed since that parent's own last change (`git log`, and IDEAS.md's decisions
+log) and say it in a few plain sentences before getting into the new request:
+new words, anything that looks or behaves differently, anything already live.
+Maria asked for this on 2026-09-13 — don't wait to be asked.
 
 ## If an auto-picked image is wrong
 
