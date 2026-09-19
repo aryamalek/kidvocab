@@ -49,25 +49,11 @@ that happens, update this file to the new thinking.
 - 2026-09-13: emotions added as the next theme at Maria's request; Emotions is
   now the first deck, so it's what the app opens with. Emotion words are
   adjectives — no German article, unlike every other deck.
-  NOT PUBLISHED YET — Maria's call (2026-09-13): the deck waits until it can be
-  done properly. The words, the deck wiring and these notes sit on the branch
-  `claude/highlight-answers-toddler-bdakq7`; main does not have them.
-  Why it stalled: that session's network policy blocked both api.arasaac.org
-  and the voice service, so the 16 cards have no pictogram and no recorded
-  clips (validate.py fails on exactly those, as it should).
-  To finish it, from a session that can reach those two services:
-    1. git checkout claude/highlight-answers-toddler-bdakq7
-    2. python3 fetch_images.py
-    3. LOOK at all 16 new images/<word>.png. Emotion words go wrong more often
-       than nouns — near-identical faces for sad/scared/worried, and a picture
-       search for "cry" or "tear" can return someone tearing paper. Pin a
-       better one with `arasaac: <id>` where it's off.
-    4. python3 fetch_audio.py   5. python3 validate.py → must say ok
-    6. merge to main and tell Maria it's live.
-  Already ruled out, don't retry: the Mulberry symbol set (open AAC art,
-  reachable where ARASAAC isn't) — its emotion faces are adult and nearly
-  identical to each other at a glance, no use to a 2-year-old.
-  Arya: please check the Persian vowel marks on those 16 words when you're in
+  Published 2026-09-19: an Arya-side session finished it — fetched the 16
+  pictograms (swapped laugh → 30393 tears-of-laughter and jealous → 36911
+  child-eyeing-a-toy after visual review; kept ARASAAC's canonical valiente for
+  brave), generated all 96 voice clips, and fixed six Persian pointings
+  (خَسْتِه/تَرْسیدِه/گِرْیِه/خَنْدِه/هَیَجان‌زَدِه final-ه zir; مُتَعَجِّب zabar).
   there — they were written by a session, not by you.
 
 - 2026-09-13: start with 45-word core set; images = ARASAAC, audio = two
